@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikegah Oliver - Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ikegah Oliver</h1>
+        <p>Software Developer</p>
+    </header>
+
+    <div class="container">
+        <section class="cv-section">
+            <h2>About Me</h2>
+            <p>As an aspiring backend developer, I am passionate about building scalable,
+                high-performance web applications and services. With a solid foundation in
+                computer science principles and programming languages such as
+                Javascript, NodeJS and Typescript. I am constantly seeking new challenges and
+                opportunities to grow as a developer. I am dedicated to writing clean,
+                maintainable code that adheres to best practices and standards, and I am
+                committed to collaborating effectively with cross-functional teams to
+                deliver
+                outstanding results</p>
+        </section>
+
+        <section class="cv-section">
+            <h2>Education</h2>
+            <ul>
+                <li>University of Port Harcourt - BEng Mechatronic Engineering, Current</li>
+                <li>Altschool Africa - Backend Dev Certificate, 2023</li>
+            </ul>
+        </section>
+
+        <section class="cv-section">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="https://irestaurant-chatbot.onrender.com/" target="_blank">Chatbot app</a></li>
+                <li><a href="https://oliver-blog-api.herokuapp.com/" target="_blank">Blog API</a></li>
+            </ul>
+        </section>
+
+        <section class="cv-section">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+                <li>Express.js</li>
+            </ul>
+        </section>
+
+        <section class="cv-section">
+            <h2>Contact</h2>
+            <p>Email: ikegaholiver@email.com</p>
+            <p>Phone: +234 8072552587</p>
+        </section>
+
+        <section class="cv-section">
+            <h2>Gallery</h2>
+            <div> 
+                <p>Click on an image to enlarge it</p>
+            </div>
+            <div class="gallery">
+                <img src="WhatsApp Image 2023-09-14 at 3.15.26 PM.jpeg" alt="Image 1" onclick="openImage(this)">
+                <img src="WhatsApp Image 2023-09-14 at 3.15.27 PM.jpeg" alt="Image 2" onclick="openImage(this)">
+                <img src="WhatsApp Image 2023-09-14 at 3.18.09 PM (1).jpeg" alt="Image 3" onclick="openImage(this)">            
+                <img src="WhatsApp Image 2023-09-14 at 3.18.09 PM (2).jpeg" alt="Image 3" onclick="openImage(this)">            
+                <img src="WhatsApp Image 2023-09-14 at 3.18.09 PM.jpeg" alt="Image 3" onclick="openImage(this)">            
+                <img src="WhatsApp Image 2023-09-14 at 5.03.32 PM.jpeg" alt="Image 3" onclick="openImage(this)">            
+            </div>
+
+            <div class="overlay" onclick="closeImage()">
+                <span class="close-button" onclick="closeImage()">&times;</span>
+                <img id="overlay-image" src="" alt="Overlay Image">
+            </div>
+        </section>
+    </div>
+
+<footer>
+    <ul>
+    <li><a href="https://twitter.com/KraneOliver" target="_blank">My Twitter</a></li>
+    <li><a href="https://www.linkedin.com/in/ikegah-oliver" target="_blank">My LinkedIn</a></li>
+    <li><a href="https://github.com/oliverTwist2" target="_blank">My GitHub</a></li>
+    </ul>
+</footer>
+
+     <!-- JavaScript for the image gallery -->
+     <script>
+        function openImage(image) {
+            const overlay = document.querySelector('.overlay');
+            const overlayImage = document.getElementById('overlay-image');
+
+            overlayImage.src = image.src;
+            overlay.style.display = 'block';
+        }
+
+        function closeImage() {
+            const overlay = document.querySelector('.overlay');
+            overlay.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
